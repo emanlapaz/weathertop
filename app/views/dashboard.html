@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"dashboard"/}
+<div class="ui center aligned header">
+    <h1>Weather Top Stations</h1></div>
+   <h4>Welcome ${member.firstname} ${member.lastname}</h4>
+#{list items:stations, as:'station'}
+<section class="ui segment">
+    <p>   #{latestreading station:station /}</p>
+    <a href="/stations/${station.id}" class="ui  icon button">
+        <i class="icon blue folder open"></i>
+    </a>
+    <a href="/dashboard/deletestation/${station.id}" class="ui icon button">
+        <i class="icon  red trash alternate"></i>
+        </a>
+
+</section>
+
+#{/list}
+#{addstation /}
