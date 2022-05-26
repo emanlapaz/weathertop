@@ -3,7 +3,7 @@ eclipse
 documentation
 tmp
 .classpath
-.project.project
+.project
 *.iml
 *.ipr
 *.iws
