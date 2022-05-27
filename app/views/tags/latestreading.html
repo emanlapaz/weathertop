@@ -34,7 +34,7 @@
             </div>
             <p>${_station.getLatestReading()?.temperature} ° C</p>
             <p> ${_station.getLatestReading()?.getTempFahrenheit()?.round(1)}° F</p>
-            <p>min:#{if _station.readings.size() > 1} station?.getMinTemp()?.temperature}#{/if} ° C</p>
+            <p>min:#{if _station.readings.size() > 1} ${_station?.getMinTemp()?.temperature}#{/if} ° C</p>
             <p>max:#{if _station.readings.size() > 1} ${_station?.getMaxTemp()?.temperature}#{/if} ° C</p>
         </div>
     </div>
