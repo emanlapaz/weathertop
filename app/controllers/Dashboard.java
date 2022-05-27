@@ -1,16 +1,9 @@
 package controllers;
-
 import models.Station;
 import models.Member;
-import models.Reading;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-
 import play.Logger;
 import play.mvc.Controller;
-
 
 public class Dashboard extends Controller {
 
@@ -19,9 +12,7 @@ public class Dashboard extends Controller {
     Member member = Accounts.getLoggedInMember();
     List<Station> stations = member.stations;
     render("dashboard.html", member, stations);
-
   }
-
   public static void deleteStation(Long id) {
     Logger.info("Deleting a Station");
     Member member = Accounts.getLoggedInMember();

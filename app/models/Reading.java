@@ -1,7 +1,6 @@
 package models;
 import play.db.jpa.Model;
 import utils.StationReading;
-
 import javax.persistence.Entity;
 @Entity
 public class Reading extends Model {
